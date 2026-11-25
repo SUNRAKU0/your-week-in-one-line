@@ -7,4 +7,6 @@ const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 const line = 'This week I submitted 20 bounties, and my own git clone was flagged as a security risk. Twice.';
 
 mkdirSync(outDir, { recursive: true });
-writeFileSync(join(outDir, 'entry.txt'), line + '\n', 'utf8');
+// The week's diary gets one page, so all twenty bounties share the same bookmark.
+const entryPath = join(outDir, 'entry.txt');
+writeFileSync(entryPath, line + '\n', 'utf8');
