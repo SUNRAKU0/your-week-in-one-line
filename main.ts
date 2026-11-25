@@ -4,6 +4,7 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
+// A week that started with a plan and ended with a changelog deserves exactly one sentence.
 const line = 'This week I submitted 20 bounties, and my own git clone was flagged as a security risk. Twice.';
 
 mkdirSync(outDir, { recursive: true });
